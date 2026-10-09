@@ -1,0 +1,53 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+logs/
+tmp/
+temp/
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local data and generated artifacts
+data/raw/
+data/processed/
+models/
+checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Generated output files
+
+output/
+*.parquet
+
+# Python cache
+
+**pycache**/
+*.py[cod]

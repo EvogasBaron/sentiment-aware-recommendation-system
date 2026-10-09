@@ -1,0 +1,24 @@
+# ==== Core data processing ====
+pandas>=2.0
+pyarrow>=14.0          # read/write reviews_sentiment.parquet
+
+# ==== Spark (ALS training) ====
+pyspark==4.1.2          # must match the Spark version used to save the models (see models/*/metadata)
+
+# ==== MongoDB ====
+pymongo>=4.6
+
+# ==== Sentiment analysis (HuggingFace, multilingual, multi-class) ====
+transformers>=4.40
+torch>=2.2               # backend for pipeline("sentiment-analysis")
+# model used: nlptown/bert-base-multilingual-uncased-sentiment (auto-downloaded on first run)
+
+# ==== Notebook ====
+jupyter>=1.0
+ipykernel>=6.29
+
+# ==== System requirements (not installed via pip) ====
+# - Java 17 (Eclipse Adoptium JDK 17) required to run PySpark
+# - MongoDB server running at mongodb://localhost:27017/ (or set MONGO_URI)
+# - MongoDB Spark Connector 11.x (org.mongodb.spark:mongo-spark-connector_2.13:11.1.0)
+#   is downloaded automatically by Spark on first run (needs internet access)
